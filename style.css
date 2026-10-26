@@ -35,7 +35,7 @@ body {
 .task-row-wrapper {
   display: flex;
   /* Preserve the gap left by the browser's repair of the original HTML. */
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
 ul {
   margin: 0;
