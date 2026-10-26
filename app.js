@@ -28,11 +28,7 @@ const createTaskItem = function (taskText) {
   deleteIcon.src = './remove.svg';
   deleteButton.appendChild(deleteIcon);
 
-  taskItem.appendChild(checkbox);
-  taskItem.appendChild(label);
-  taskItem.appendChild(editInput);
-  taskItem.appendChild(editButton);
-  taskItem.appendChild(deleteButton);
+  taskItem.append(checkbox, label, editInput, editButton, deleteButton);
   return taskItem;
 };
 
@@ -66,8 +62,7 @@ const editTask = function () {
 
 const deleteTask = function () {
   const taskItem = this.parentNode;
-  const taskList = taskItem.parentNode;
-  taskList.removeChild(taskItem);
+  taskItem.remove();
 };
 
 const toggleTaskStatus = function () {
