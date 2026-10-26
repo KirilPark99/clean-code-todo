@@ -22,7 +22,22 @@ remove.svg             иконка кнопки удаления
 eisenhower-matrix.jpg  изображение в шапке
 ```
 
-Сборщика и зависимостей нет. Чтобы запустить приложение, откройте `index.html` в браузере.
+Сборщика и зависимостей для работы приложения нет. Чтобы запустить приложение, откройте `index.html` в браузере.
+
+Для разработки установите Node.js 22 и зависимости:
+
+```bash
+npm install
+```
+
+Проверка JavaScript и форматирования:
+
+```bash
+npm run lint
+npx prettier --check .
+```
+
+Для форматирования файлов используйте `npm run format`. Перед каждым коммитом Husky запускает ESLint и Prettier через lint-staged только для подготовленных файлов. Хук проверяет код, но не исправляет его автоматически.
 
 ## Чек-лист поведения
 
@@ -56,4 +71,4 @@ eisenhower-matrix.jpg  изображение в шапке
 
 ## Происхождение
 
-Репозиторий основан на [rolling-scopes-school/clean-code-s1e1](https://github.com/rolling-scopes-school/clean-code-s1e1), стартовом проекте задания Clean Code S1E1 первого этапа RS School. Код приложения сохранён без изменений.
+Репозиторий основан на [rolling-scopes-school/clean-code-s1e1](https://github.com/rolling-scopes-school/clean-code-s1e1), стартовом проекте задания Clean Code S1E1 первого этапа RS School. При рефакторинге поведение исходного приложения сохранено.
